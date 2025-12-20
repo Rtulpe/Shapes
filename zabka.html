@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shape Battle: Arena v6.7_Final_Final_Final(2)</title>
+    <!-- Favicons: WebP primary, SVG fallback (relative paths, simple) -->
+    <link rel="icon" type="image/webp" href="own-nothing.webp?v=5" sizes="32x32 48x48 64x64">
+    <link rel="shortcut icon" type="image/webp" href="own-nothing.webp?v=5">
+    <link rel="icon" type="image/svg+xml" href="own-nothing.svg?v=5">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <div id="setup">
+        <h1>BATTLE ARENA v6.7_Final_Final_Final(2)</h1>
+        <div class="picker-container">
+            <div class="player-select">
+                <h3 class="p2-color">Player 1</h3>
+                <select id="p1Select">
+                    <option value="triangle">Triangle</option>
+                    <option value="star">Star</option>
+                    <option value="square">Square</option>
+                    <option value="hexagon">Hexagon</option>
+                    <option value="circle">Circle</option>
+                    <option value="pentagon">Pentagon</option>
+                    <option value="rhombus">Rhombus</option>
+                </select>
+            </div>
+            <div class="player-select">
+                <h3 class="p1-color">Player 2</h3>
+                <select id="p2Select">
+                    <option value="square">Square</option>
+                    <option value="star">Star</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="hexagon">Hexagon</option>
+                    <option value="circle">Circle</option>
+                    <option value="pentagon">Pentagon</option>
+                    <option value="rhombus">Rhombus</option>
+                </select>
+            </div>
+        </div>
+        <button id="startBtn">INITIALIZE BATTLE</button>
+    </div>
+
+    <div class="stats-dashboard" id="dashboard">
+        <div class="stat-box" id="p1-header">
+            <div style="font-weight: bold; border-bottom: 1px solid #fff; margin-bottom: 5px;">P1 [<span id="p1-type-ui">-</span>]</div>
+            <div>HP: <span id="hp1">0</span> | Mana: <span id="mana1">0</span></div>
+            <div>Damage: <span id="dmg1">0</span></div>
+            <div>Defense: <span id="def1">0</span> | Speed: <span id="spd1">0</span></div>
+            <div id="eff1-row">Phantom Eff: <span id="eff1">—</span></div>
+        </div>
+        <div class="stat-box" id="p2-header">
+            <div style="font-weight: bold; border-bottom: 1px solid #fff; margin-bottom: 5px; text-align: right;">P2 [<span id="p2-type-ui">-</span>]</div>
+            <div style="text-align: right;">HP: <span id="hp2">0</span> | Mana: <span id="mana2">0</span></div>
+            <div style="text-align: right;">Damage: <span id="dmg2">0</span></div>
+            <div style="text-align: right;">Defense: <span id="def2">0</span> | Speed: <span id="spd2">0</span></div>
+            <div id="eff2-row" style="text-align: right;">Phantom Eff: <span id="eff2">—</span></div>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    <div id="bottom-ui">
+        <div class="log-row">
+            <div class="ability-box" id="p1-ability">READY</div>
+            <div id="log"></div>
+            <div class="ability-box" id="p2-ability">READY</div>
+        </div>
+        <div class="dice-coin-area">
+            <div class="dice-area" id="dice-container">DICE: <span id="dice-val">-</span></div>
+            <div class="dice-area" id="coin-container">COIN: <span id="coin-val">-</span></div>
+        </div>
+
+        <div id="skill-legend">
+            <div class="legend-box" id="p1-legend"></div>
+            <div class="legend-box" id="p2-legend"></div>
+        </div>
+
+        <button id="restartBtn">RESTART</button>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

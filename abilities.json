@@ -1,0 +1,264 @@
+{
+  "blitz": {
+    "name": "Blitz",
+    "description": "+0.5x Dmg + Speed (2s)",
+    "cost": 5,
+    "type": "buff",
+    "apply": "self",
+    "emoji": "⚡",
+    "duration": 2000,
+    "effect": {
+      "property": "blitzActive",
+      "value": true
+    }
+  },
+  "poison": {
+    "name": "Poison",
+    "description": "Apply on collision (next hit)",
+    "cost": 10,
+    "type": "attack",
+    "apply": "self",
+    "emoji": "☠️",
+    "effect": {
+      "property": "poisonAttackActive",
+      "value": true,
+      "onHit": {
+        "target": "enemy",
+        "property": "poisoned",
+        "duration": 5,
+        "damagePerSecond": 0.2
+      }
+    }
+  },
+  "phantom": {
+    "name": "Phantom",
+    "description": "Create 2x Phantom Copies",
+    "cost": 15,
+    "type": "ultimate",
+    "apply": "self",
+    "emoji": "👻",
+    "effect": {
+      "spawnCopies": true,
+      "count": "allSameSide",
+      "phantom": true
+    }
+  },
+  "shield": {
+    "name": "Shield",
+    "description": "Block next hit",
+    "cost": 5,
+    "type": "buff",
+    "apply": "self",
+    "emoji": "🛡️",
+    "effect": {
+      "property": "isShielded",
+      "value": true
+    }
+  },
+  "mine": {
+    "name": "Mine",
+    "description": "Set 2x Dmg trap (50% Mana drain)",
+    "cost": 10,
+    "type": "attack",
+    "apply": "self",
+    "emoji": "💣",
+    "effect": {
+      "spawnMine": true,
+      "damageMultiplier": 2,
+      "manaDrain": 0.5
+    }
+  },
+  "suffering": {
+    "name": "Suffering",
+    "description": "+Dmg from missing health",
+    "cost": 15,
+    "type": "ultimate",
+    "apply": "self",
+    "emoji": "💔",
+    "effect": {
+      "property": "sufferingBonus",
+      "calculation": "missingHealthBonus"
+    }
+  },
+  "victim": {
+    "name": "Lawsuit",
+    "description": "Reflect 50% damage",
+    "cost": 5,
+    "type": "buff",
+    "apply": "self",
+    "emoji": "⚖️",
+    "effect": {
+      "property": "victimActive",
+      "value": true
+    }
+  },
+  "starRay": {
+    "name": "Star Ray",
+    "description": "2x Dmg bouncing projectile",
+    "cost": 10,
+    "type": "attack",
+    "apply": "self",
+    "emoji": "🌠",
+    "effect": {
+      "spawnRay": true,
+      "damageMultiplier": 2,
+      "targetEnemy": true
+    }
+  },
+  "usury": {
+    "name": "Interest",
+    "description": "Double mana + Auto-cast 2 skills",
+    "cost": 15,
+    "type": "ultimate",
+    "apply": "self",
+    "emoji": "💵",
+    "effect": {
+      "doubleMana": true,
+      "autocast": ["buff", "attack"]
+    }
+  },
+  "dogma": {
+    "name": "Dogma",
+    "description": "+2 Defense",
+    "cost": 0,
+    "type": "buff",
+    "apply": "self",
+    "emoji": "📜",
+    "effect": {
+      "property": "defense",
+      "modifier": 2
+    }
+  },
+  "inquisition": {
+    "name": "Inquisition",
+    "description": "Convert mana to antimana (1x use)",
+    "cost": 0,
+    "type": "attack",
+    "apply": "self",
+    "emoji": "✝️",
+    "effect": {
+      "property": "inquisitionActive",
+      "value": true,
+      "addToAuraList": true
+    }
+  },
+  "divineBlessing": {
+    "name": "Intervention",
+    "description": "Hijack random enemy skill",
+    "cost": 0,
+    "type": "ultimate",
+    "apply": "special",
+    "emoji": "🕊️",
+    "effect": {
+      "hijackEnemySkill": true,
+      "randomRoll": true,
+      "useEnemyMana": true
+    }
+  },
+  "reversal": {
+    "name": "Reversal",
+    "description": "Mana heals, anti-mana deleted (5s)",
+    "cost": 5,
+    "type": "buff",
+    "apply": "self",
+    "emoji": "🔄",
+    "effect": {
+      "property": "reversalActive",
+      "value": true,
+      "duration": 5000
+    }
+  },
+  "condensation": {
+    "name": "Condensation",
+    "description": "50% mana = 0.01x atk per point (1 attack)",
+    "cost": 10,
+    "type": "attack",
+    "apply": "self",
+    "emoji": "💧",
+    "effect": {
+      "manaBoostDamage": true
+    }
+  },
+  "domainExpansion": {
+    "name": "Domain Expansion",
+    "description": "Domain for 10s: 0.2x atk damage/frame",
+    "cost": 15,
+    "type": "ultimate",
+    "apply": "self",
+    "emoji": "🌌",
+    "effect": {
+      "createDomain": true,
+      "duration": 10000
+    }
+  },
+  "patriotism": {
+    "name": "Patriotism",
+    "description": "All stats +1 for 5s",
+    "cost": 5,
+    "type": "buff",
+    "apply": "self",
+    "emoji": "🇺🇸",
+    "duration": 5000,
+    "effect": {
+      "property": "patriotism",
+      "value": true
+    }
+  },
+  "foreignBase": {
+    "name": "Foreign Base",
+    "description": "Place turret that shoots every second",
+    "cost": 10,
+    "type": "attack",
+    "apply": "self",
+    "emoji": "🎯",
+    "effect": {
+      "spawnTurret": true
+    }
+  },
+  "insideJob": {
+    "name": "Inside Job",
+    "description": "Swap higher HP or Mana with enemy",
+    "cost": 15,
+    "type": "ultimate",
+    "apply": "self",
+    "emoji": "🕵️",
+    "effect": {
+      "insideJob": true
+    }
+  },
+  "probabilityAlteration": {
+    "name": "Probability Alteration",
+    "description": "Cast Lord's Coin on self",
+    "cost": 5,
+    "type": "buff",
+    "apply": "self",
+    "emoji": "🎰",
+    "effect": {
+      "probability": true
+    }
+  },
+  "ddos": {
+    "name": "DDOS",
+    "description": "Silence enemy for 6s",
+    "cost": 10,
+    "type": "attack",
+    "apply": "self",
+    "emoji": "🔐",
+    "duration": 6000,
+    "effect": {
+      "ddos": true
+    }
+  },
+  "wonderOfYou": {
+    "name": "Wonder of You",
+    "description": "Heal mana spent by enemy for 5s",
+    "cost": 15,
+    "type": "ultimate",
+    "apply": "self",
+    "emoji": "💫",
+    "duration": 5000,
+    "effect": {
+      "wonderOfYou": true
+    }
+  }
+}
