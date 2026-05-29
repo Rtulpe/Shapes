@@ -1,4 +1,6 @@
-# Agent Guidelines for working on Shapes
+-# Agent Guidelines for working on Shapes
+
+Author: Rustenis Tolpeznikas
 
 Purpose
 - Provide clear rules and expectations for future agents editing or extending this repository.
@@ -6,6 +8,7 @@ Purpose
 Repository notes
 - The codebase is a simple browser-based game located at `zabka.html` and `js/` modules.
 - Preserve the Apache-2.0 license in the repository root and include a short attribution comment in any new or modified files when appropriate.
+- Produced with autonomous agents; when changing major behavior, add a note describing which agent or workflow made the change.
 
 Agent workflow
 - Create a feature branch per task and include the ticket/issue id in the branch name: `agent/<short-desc>`.

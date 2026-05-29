@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start simple HTTP server
+        run: |
+          python3 -m http.server 8000 &
+          pid=$!
+          sleep 0.8
+          curl -sSf http://127.0.0.1:8000/zabka.html
+          kill $pid || true

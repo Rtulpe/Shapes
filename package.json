@@ -1,0 +1,13 @@
+{
+  "name": "shapes-agent-portfolio",
+  "version": "0.1.0",
+  "description": "Small browser shapes demo produced by agentic engineering",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "smoke-test": "bash -c 'python3 -m http.server 8000 >/dev/null 2>&1 & pid=$!; sleep 0.6; code=$(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/zabka.html || echo 000); kill $pid || true; echo $code'"
+  },
+  "author": "Rustenis Tolpeznikas",
+  "license": "Apache-2.0"
+}

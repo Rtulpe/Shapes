@@ -1,5 +1,7 @@
 # Shapes — Agentic Engineering Portfolio Example
 
+Author: Rustenis Tolpeznikas
+
 This small web project demonstrates agentic engineering: it was assembled and iterated on by autonomous agents as a portfolio example.
 
 Overview
@@ -20,8 +22,10 @@ Files
 - JS folder: `js/` contains game modules (`main.js`, `render.js`, `mechanics.js`, `shape.js`, etc.)
 
 Notes for maintainers
-- This repository was produced by agent workflows; treat it as a showcase of agent-driven development.
+- This repository was produced with autonomous agents; treat it as a showcase of agent-driven development.
 - See `guidelines.md` for rules future agents should follow when modifying or extending the project.
+
+Maintainer: Rustenis Tolpeznikas
 
 License
 - This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE).
