@@ -5,7 +5,7 @@ Author: Rustenis Tolpeznikas
 This small web project demonstrates agentic engineering: it was assembled and iterated on by autonomous agents as a portfolio example.
 
 Overview
-- Lightweight browser app rendering shapes and simple mechanics.
+- Lightweight browser game with shapes and simple mechanics.
 - Open `zabka.html` in a browser or serve the folder with a static HTTP server.
 
 Run locally
